@@ -42,7 +42,7 @@ class People extends Tax {
         return ecoPeople;
     }
 
-    int[] indexOfEcoPeople() {
+    private int[] indexOfEcoPeople() {
         List<Integer> integerList = new ArrayList<>();
         for (int i = 0; i < waterCount.length; i++) {
             if (waterCount[i] < getEcoNumber() & getGasCount()[i] < getEcoNumber()
@@ -67,7 +67,7 @@ class People extends Tax {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String pathToFile = scanner.nextLine();         ///Users/dmitry_shapran/Documents/education/Java/example/data.csv
+        String pathToFile = scanner.nextLine();         //путь к файлу
         String ecoNumberScanner = scanner.nextLine();   //критерий оценки экологичности
 
         People people = new People(pathToFile, ecoNumberScanner);
